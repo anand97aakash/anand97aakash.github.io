@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhD Portfolio | UW-Madison</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#home">
+                    <h1>Your Name</h1>
+                    <p>PhD Student | UW-Madison</p>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#cv">CV</a></li>
+                    <li><a href="#teaching">Teaching</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home/About Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="https://via.placeholder.com/400x500" alt="Your Name">
+                </div>
+                <div class="hero-text">
+                    <h2>Hello, I'm Your Name</h2>
+                    <h3>PhD Student in [Your Field]</h3>
+                    <p class="lead">I am a doctoral candidate at the University of Wisconsin-Madison, focusing on [brief description of research focus].</p>
+                    <p>My research explores the intersection of [research area 1] and [research area 2], with particular emphasis on [specific focus]. I am passionate about [research motivation] and aim to contribute to [broader impact].</p>
+                    <div class="hero-buttons">
+                        <a href="#research" class="btn btn-primary">My Research</a>
+                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="section">
+        <div class="container">
+            <h2 class="section-title">Research</h2>
+            <div class="section-content">
+                <div class="research-interests">
+                    <h3>Research Interests</h3>
+                    <ul>
+                        <li>Research Area 1</li>
+                        <li>Research Area 2</li>
+                        <li>Research Area 3</li>
+                        <li>Research Area 4</li>
+                    </ul>
+                </div>
+                
+                <div class="current-research">
+                    <h3>Current Projects</h3>
+                    <div class="research-project">
+                        <h4>Project Title 1</h4>
+                        <p>Detailed description of your current research project, including methodology, goals, and expected outcomes. This should be a comprehensive overview that demonstrates your expertise and the significance of your work.</p>
+                        <div class="research-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Research Project 1">
+                            <p class="caption">Caption for research image</p>
+                        </div>
+                    </div>
+                    
+                    <div class="research-project">
+                        <h4>Project Title 2</h4>
+                        <p>Description of another research project you're working on. Include information about collaborators, funding sources, and the potential impact of this research on your field.</p>
+                    </div>
+                </div>
+                
+                <div class="research-methodology">
+                    <h3>Research Methodology</h3>
+                    <p>Overview of the research methods and approaches you employ in your work. This section should highlight your technical expertise and methodological rigor.</p>
+                </div>
+                
+                <div class="future-directions">
+                    <h3>Future Research Directions</h3>
+                    <p>Discussion of where you see your research heading in the future and the questions you hope to address in upcoming work.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section">
+        <div class="container">
+            <h2 class="section-title">Publications</h2>
+            <div class="section-content">
+                <div class="publication-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="journal">Journal Articles</button>
+                    <button class="filter-btn" data-filter="conference">Conference Papers</button>
+                    <button class="filter-btn" data-filter="other">Other Publications</button>
+                </div>
+                
+                <div class="publications-list">
+                    <div class="publication-year">
+                        <h3>2025</h3>
+                        <div class="publication-item" data-type="journal">
+                            <h4>Title of Publication 1</h4>
+                            <p class="authors">Author 1, <strong>Your Name</strong>, Author 3</p>
+                            <p class="journal">Journal Name, Volume(Issue), Pages</p>
+                            <p class="abstract">Brief abstract or description of the publication.</p>
+                            <div class="publication-links">
+                                <a href="#" class="btn btn-small">PDF</a>
+                                <a href="#" class="btn btn-small">DOI</a>
+                                <a href="#" class="btn btn-small">BibTeX</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-year">
+                        <h3>2024</h3>
+                        <div class="publication-item" data-type="conference">
+                            <h4>Title of Conference Paper 1</h4>
+                            <p class="authors"><strong>Your Name</strong>, Author 2</p>
+                            <p class="journal">Conference Name, Location</p>
+                            <p class="abstract">Brief abstract or description of the conference paper.</p>
+                            <div class="publication-links">
+                                <a href="#" class="btn btn-small">PDF</a>
+                                <a href="#" class="btn btn-small">Slides</a>
+                                <a href="#" class="btn btn-small">BibTeX</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-item" data-type="journal">
+                            <h4>Title of Publication 2</h4>
+                            <p class="authors">Author 1, <strong>Your Name</strong></p>
+                            <p class="journal">Journal Name, Volume(Issue), Pages</p>
+                            <p class="abstract">Brief abstract or description of the publication.</p>
+                            <div class="publication-links">
+                                <a href="#" class="btn btn-small">PDF</a>
+                                <a href="#" class="btn btn-small">DOI</a>
+                                <a href="#" class="btn btn-small">BibTeX</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-year">
+                        <h3>2023</h3>
+                        <div class="publication-item" data-type="other">
+                            <h4>Title of Working Paper 1</h4>
+                            <p class="authors"><strong>Your Name</strong></p>
+                            <p class="journal">Working Paper</p>
+                            <p class="abstract">Brief abstract or description of the working paper.</p>
+                            <div class="publication-links">
+                                <a href="#" class="btn btn-small">PDF</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Section -->
+    <section id="cv" class="section">
+        <div class="container">
+            <h2 class="section-title">Curriculum Vitae</h2>
+            <div class="section-content">
+                <div class="cv-download">
+                    <a href="#" class="btn btn-primary">Download Full CV (PDF)</a>
+                </div>
+                
+                <div class="cv-section">
+                    <h3>Education</h3>
+                    <div class="cv-item">
+                        <div class="cv-year">2022 - Present</div>
+                        <div class="cv-details">
+                            <h4>Ph.D. in [Your Field]</h4>
+                            <p>University of Wisconsin-Madison</p>
+                            <p>Advisor: Professor Name</p>
+                            <p>Dissertation: "Title of Your Dissertation"</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-item">
+                        <div class="cv-year">2020 - 2022</div>
+                        <div class="cv-details">
+                            <h4>M.S. in [Your Field]</h4>
+                            <p>University Name</p>
+                            <p>Thesis: "Title of Your Master's Thesis"</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-item">
+                        <div class="cv-year">2016 - 2020</div>
+                        <div class="cv-details">
+                            <h4>B.S. in [Your Field]</h4>
+                            <p>University Name</p>
+                            <p>Honors: Cum Laude, Dean's List</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cv-section">
+                    <h3>Professional Experience</h3>
+                    <div class="cv-item">
+                        <div class="cv-year">2022 - Present</div>
+                        <div class="cv-details">
+                            <h4>Graduate Research Assistant</h4>
+                            <p>Department Name, University of Wisconsin-Madison</p>
+                            <ul>
+                                <li>Description of research responsibilities</li>
+                                <li>Key achievements and contributions</li>
+                                <li>Projects and collaborations</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-item">
+                        <div class="cv-year">2021 - 2022</div>
+                        <div class="cv-details">
+                            <h4>Research Intern</h4>
+                            <p>Company or Institution Name</p>
+                            <ul>
+                                <li>Description of internship responsibilities</li>
+                                <li>Key achievements and contributions</li>
+                                <li>Skills developed</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cv-section">
+                    <h3>Awards and Honors</h3>
+                    <div class="cv-item">
+                        <div class="cv-year">2023</div>
+                        <div class="cv-details">
+                            <h4>Award Name</h4>
+                            <p>Awarding Institution</p>
+                            <p>Brief description of the award and its significance</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-item">
+                        <div class="cv-year">2022</div>
+                        <div class="cv-details">
+                            <h4>Fellowship Name</h4>
+                            <p>Awarding Institution</p>
+                            <p>Brief description of the fellowship and its significance</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cv-section">
+                    <h3>Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>Research Methods</h4>
+                            <ul>
+                                <li>Research Method 1</li>
+                                <li>Research Method 2</li>
+                                <li>Research Method 3</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4>Technical Skills</h4>
+                            <ul>
+                                <li>Technical Skill 1</li>
+                                <li>Technical Skill 2</li>
+                                <li>Technical Skill 3</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4>Languages</h4>
+                            <ul>
+                                <li>Language 1 (Proficiency Level)</li>
+                                <li>Language 2 (Proficiency Level)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching Section -->
+    <section id="teaching" class="section">
+        <div class="container">
+            <h2 class="section-title">Teaching</h2>
+            <div class="section-content">
+                <div class="teaching-philosophy">
+                    <h3>Teaching Philosophy</h3>
+                    <p>A statement about your approach to teaching, your pedagogical values, and your goals as an educator. This should reflect your commitment to student learning and development.</p>
+                </div>
+                
+                <div class="courses-taught">
+                    <h3>Courses Taught</h3>
+                    <div class="course-item">
+                        <h4>Course Title 1</h4>
+                        <p class="course-details">Department, University of Wisconsin-Madison, Semester Year</p>
+                        <p>Brief description of the course, your role, and teaching responsibilities.</p>
+                        <div class="course-materials">
+                            <a href="#" class="btn btn-small">Syllabus</a>
+                            <a href="#" class="btn btn-small">Sample Materials</a>
+                        </div>
+                    </div>
+                    
+                    <div class="course-item">
+                        <h4>Course Title 2</h4>
+                        <p class="course-details">Department, University of Wisconsin-Madison, Semester Year</p>
+                        <p>Brief description of the course, your role, and teaching responsibilities.</p>
+                        <div class="course-materials">
+                            <a href="#" class="btn btn-small">Syllabus</a>
+                            <a href="#" class="btn btn-small">Sample Materials</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="student-testimonials">
+                    <h3>Student Testimonials</h3>
+                    <div class="testimonial">
+                        <blockquote>
+                            "Testimonial from a student about your teaching effectiveness and impact on their learning."
+                        </blockquote>
+                        <p class="testimonial-source">- Student Name, Course Title, Semester Year</p>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <blockquote>
+                            "Another testimonial from a student highlighting different aspects of your teaching approach."
+                        </blockquote>
+                        <p class="testimonial-source">- Student Name, Course Title, Semester Year</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="section-content">
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Project 1">
+                        </div>
+                        <div class="project-details">
+                            <h3>Project Title 1</h3>
+                            <p>Detailed description of the project, including goals, methodology, and outcomes. This should provide a comprehensive overview of your work.</p>
+                            <div class="project-meta">
+                                <p><strong>Duration:</strong> Start Date - End Date</p>
+                                <p><strong>Collaborators:</strong> Name 1, Name 2</p>
+                                <p><strong>Funding:</strong> Funding Source</p>
+                            </div>
+                            <a href="#" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Project 2">
+                        </div>
+                        <div class="project-details">
+                            <h3>Project Title 2</h3>
+                            <p>Detailed description of the project, including goals, methodology, and outcomes. This should provide a comprehensive overview of your work.</p>
+                            <div class="project-meta">
+                                <p><strong>Duration:</strong> Start Date - End Date</p>
+                                <p><strong>Collaborators:</strong> Name 1, Name 2</p>
+                                <p><strong>Funding:</strong> Funding Source</p>
+                            </div>
+                            <a href="#" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Project 3">
+                        </div>
+                        <div class="project-details">
+                            <h3>Project Title 3</h3>
+                            <p>Detailed description of the project, including goals, methodology, and outcomes. This should provide a comprehensive overview of your work.</p>
+                            <div class="project-meta">
+                                <p><strong>Duration:</strong> Start Date - End Date</p>
+                                <p><strong>Collaborators:</strong> Name 1, Name 2</p>
+                                <p><strong>Funding:</strong> Funding Source</p>
+                            </div>
+                            <a href="#" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="section-content">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>your.email@wisc.edu</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Department Name<br>University of Wisconsin-Madison<br>Madison, WI 53706</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <p>Office Hours: Days, Times</p>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="ResearchGate"><i class="fab fa-researchgate"></i></a>
+                            <a href="#" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3>Send a Message</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Your Name</h3>
+                    <p>PhD Student | UW-Madison</p>
+                </div>
+                
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#research">Research</a></li>
+                        <li><a href="#publications">Publications</a></li>
+                        <li><a href="#cv">CV</a></li>
+                        <li><a href="#teaching">Teaching</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="ResearchGate"><i class="fab fa-researchgate"></i></a>
+                    <a href="#" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Your Name. All rights reserved.</p>
+                <p>Proudly affiliated with <a href="https://www.wisc.edu/" target="_blank">University of Wisconsin-Madison</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
