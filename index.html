@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akash Anand | PhD Portfolio | UW-Madison</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#home">
+                    <h1>Akash Anand</h1>
+                    <p>PhD Student & NASA FINESST Fellow | UW-Madison</p>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#cv">CV</a></li>
+                    <li><a href="#teaching">Teaching</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home/About Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="https://via.placeholder.com/400x500" alt="Akash Anand">
+                </div>
+                <div class="hero-text">
+                    <h2>Hello, I'm Akash Anand</h2>
+                    <h3>PhD Student in Forestry & NASA FINESST Fellow</h3>
+                    <p class="lead">I am a doctoral candidate at the University of Wisconsin-Madison, focusing on remote sensing and ecological modeling applications in forestry and wildlife ecology.</p>
+                    <p>My research explores the intersection of remote sensing and ecological modeling, with particular emphasis on applying machine learning and deep learning techniques to understand species distribution and habitat selection. I am passionate about developing innovative computational approaches to address ecological questions and aim to contribute to biodiversity conservation and sustainable ecosystem management.</p>
+                    <div class="hero-buttons">
+                        <a href="#research" class="btn btn-primary">My Research</a>
+                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="section">
+        <div class="container">
+            <h2 class="section-title">Research</h2>
+            <div class="section-content">
+                <div class="research-interests">
+                    <h3>Research Interests</h3>
+                    <ul>
+                        <li>Remote Sensing</li>
+                        <li>Ecological Modeling</li>
+                        <li>Machine Learning & Deep Learning</li>
+                        <li>Species Distribution Modeling</li>
+                        <li>Satellite Imagery Analysis</li>
+                        <li>Geospatial Analysis</li>
+                    </ul>
+                </div>
+                
+                <div class="current-research">
+                    <h3>Current Projects</h3>
+                    <div class="research-project">
+                        <h4>Convolutional Neural Networks for Species Distribution Modeling</h4>
+                        <p>This research focuses on applying deep learning techniques, specifically Convolutional Neural Networks (CNNs), to improve species distribution modeling. By leveraging the spatial patterns in environmental data, CNNs can capture complex relationships between species occurrences and their habitats more effectively than traditional statistical methods. This project aims to develop more accurate predictive models for biodiversity conservation and management.</p>
+                        <div class="research-image">
+                            <img src="https://via.placeholder.com/600x400" alt="CNN for Species Distribution">
+                            <p class="caption">Visualization of CNN architecture for species distribution modeling</p>
+                        </div>
+                    </div>
+                    
+                    <div class="research-project">
+                        <h4>Dynamic Habitat Indices from Satellite Imagery</h4>
+                        <p>Working with the SILVIS Lab team on developing and analyzing Dynamic Habitat Indices (DHIs) derived from Landsat and Sentinel-2 satellite imagery. This project involves processing time-series satellite data to create metrics that characterize habitat conditions for wildlife species. The research includes collaborations with NASA and other institutions to apply these indices for biodiversity monitoring and conservation planning.</p>
+                    </div>
+                </div>
+                
+                <div class="research-methodology">
+                    <h3>Research Methodology</h3>
+                    <p>My research combines remote sensing data analysis, geospatial modeling, and advanced computational methods. I work extensively with satellite imagery (Landsat, Sentinel) and apply machine learning algorithms to extract ecological information. I use Python and R for data processing and analysis, with specialized frameworks for deep learning (TensorFlow, PyTorch). My approach emphasizes reproducible research methods and open science principles, with a focus on developing tools and techniques that can be applied across different ecological systems.</p>
+                </div>
+                
+                <div class="future-directions">
+                    <h3>Future Research Directions</h3>
+                    <p>My future research aims to further develop explainable AI techniques for ecological applications, particularly focusing on hierarchical habitat selection in birds. I'm interested in exploring how multi-scale remote sensing data can be integrated with field observations to better understand species-habitat relationships across different spatial and temporal scales. Additionally, I plan to investigate how climate change is affecting habitat suitability and species distributions, using long-term satellite data records combined with advanced modeling approaches.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section">
+        <div class="container">
+            <h2 class="section-title">Publications</h2>
+            <div class="section-content">
+                <div class="publication-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="journal">Journal Articles</button>
+                    <button class="filter-btn" data-filter="conference">Conference Papers</button>
+                    <button class="filter-btn" data-filter="other">Other Publications</button>
+                </div>
+                
+                <div class="publications-list">
+                    <div class="publication-year">
+                        <h3>2025</h3>
+                        <div class="publication-item" data-type="journal">
+                            <h4>Medium-resolution Dynamic Habitat Indices from Landsat and Sentinel-2 satellite imagery</h4>
+                            <p class="authors">Razenkova, E., K. E. Lewinska, <strong>A. Anand</strong>, H. Yin, L. S. Farwell, A. M. Pidgeon, P. Hostert, N. C. Coops, V. C. Radeloff</p>
+                            <p class="journal">Ecological Indicators (2025)</p>
+                            <p class="abstract">This study develops and analyzes Dynamic Habitat Indices derived from medium-resolution satellite imagery for ecological applications.</p>
+                            <div class="publication-links">
+                                <a href="#" class="btn btn-small">PDF</a>
+                                <a href="#" class="btn btn-small">DOI</a>
+                                <a href="#" class="btn btn-small">BibTeX</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-item" data-type="journal">
+                            <h4>Landscape scale effects of primary productivity on forest bird species occurrence and abundance in Argentina</h4>
+                            <p class="authors">Olah, A., V. C. Radeloff, <strong>A. Anand</strong>, E. M. O. Silviera, N. Politi, L. Rivera, S. Martinuzzi, G. M. Pastur, A. M. Pidgeon</p>
+                            <p class="journal">Landscape Ecology (2025)</p>
+                            <p class="abstract">Analysis of how landscape-scale primary productivity affects forest bird species in Argentina.</p>
+                            <div class="publication-links">
+                                <a href="#" class="btn btn-small">PDF</a>
+                                <a href="#" class="btn btn-small">DOI</a>
+                                <a href="#" class="btn btn-small">BibTeX</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-year">
+                        <h3>2024</h3>
+                        <div class="publication-item" data-type="journal">
+                            <h4>Global analysis of acoustic frequency characteristics in birds</h4>
+                            <p class="authors">Sagar HSSC, <strong>Anand, A.</strong>, Persche, M., Pidgeon, A.M., Zuckerberg, B., Sekerciaglu, C.H., Burivilova, Z.</p>
+                            <p class="journal">Proceedings of the Royal Society B (2024)</p>
+                            <p class="abstract">A comprehensive analysis of acoustic frequency characteristics in bird species globally.</p>
+                            <div class="publication-links">
+                                <a href="#" class="btn btn-small">PDF</a>
+                                <a href="#" class="btn btn-small">DOI</a>
+                                <a href="#" class="btn btn-small">BibTeX</a>
+                            </div>
+                        </div>
+                        
+                        <div class="publication-item" data-type="conference">
+                            <h4>Implementation of Explainable AI to Map Hierarchical Habitat Selection in Birds</h4>
+                            <p class="authors"><strong>Anand, A.</strong>, V. C. Radeloff, A. Pidgeon, R. Buron, E. Razenkova, J.Timmer</p>
+                            <p class="journal">IEEE International Geosciences and Remote Sensing Symposium (2023), Pasadena, California, USA</p>
+                            <p class="abstract">Application of explainable AI techniques to understand and map hierarchical habitat selection patterns in bird species.</p>
+                            <div class="publication-links">
+                                <a href="#" class="btn btn-small">PDF</a>
+                                <a href="#" class="btn btn-small">Slides</a>
+                                <a href="#" class="btn btn-small">BibTeX</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-year">
+                        <h3>2022</h3>
+                        <div class="publication-item" data-type="journal">
+                            <h4>Assessing the niche of Rhododendron arboreum using entropy and machine learning</h4>
+                            <p class="authors"><strong>Anand, A.</strong>, Srivastava, P.K., Pandey, P.C., Khan, M.L., & Behera, M.D.</p>
+                            <p class="journal">Journal Publication (2022)</p>
+                            <p class="abstract">This study uses entropy-based approaches and machine learning to assess the ecological niche of Rhododendron arboreum.</p>
+                            <div class="publication-links">
+                                <a href="#" class="btn btn-small">PDF</a>
+                                <a href="#" class="btn btn-small">DOI</a>
+                                <a href="#" class="btn btn-small">BibTeX</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Section -->
+    <section id="cv" class="section">
+        <div class="container">
+            <h2 class="section-title">Curriculum Vitae</h2>
+            <div class="section-content">
+                <div class="cv-download">
+                    <a href="#" class="btn btn-primary">Download Full CV (PDF)</a>
+                </div>
+                
+                <div class="cv-section">
+                    <h3>Education</h3>
+                    <div class="cv-item">
+                        <div class="cv-year">2021 - Present</div>
+                        <div class="cv-details">
+                            <h4>Ph.D. in Forestry</h4>
+                            <p>Department of Forestry and Wildlife Ecology, University of Wisconsin-Madison</p>
+                            <p>Advisor: Volker C. Radeloff | SILVIS Lab</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-item">
+                        <div class="cv-year">2014 - 2019</div>
+                        <div class="cv-details">
+                            <h4>Integrated Bachelor and Master in Geoinformatics</h4>
+                            <p>Department of Geoinformatics, Central University of Jharkhand, India</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cv-section">
+                    <h3>Professional Experience</h3>
+                    <div class="cv-item">
+                        <div class="cv-year">2019 - 2021</div>
+                        <div class="cv-details">
+                            <h4>Junior Research Fellow</h4>
+                            <p>Institute of Environment and Sustainable Development, Banaras Hindu University, India</p>
+                            <ul>
+                                <li>Project: Hyperspectral Imaging for sharper definitions of the Himalayan ecosystems and its high value plant species under climate uncertainties</li>
+                                <li>Applied remote sensing techniques to study Himalayan ecosystems</li>
+                                <li>Developed models to assess climate change impacts on high-value plant species</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cv-section">
+                    <h3>Awards and Honors</h3>
+                    <div class="cv-item">
+                        <div class="cv-year">2024-2027</div>
+                        <div class="cv-details">
+                            <h4>NASA Future Investigator in NASA Earth and Space Science and Technology (FINESST) Fellowship</h4>
+                            <p>$150,000 research funding</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-item">
+                        <div class="cv-year">2025</div>
+                        <div class="cv-details">
+                            <h4>NASA-MSU Professional Enhancement Award</h4>
+                            <p>$800</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-item">
+                        <div class="cv-year">2025</div>
+                        <div class="cv-details">
+                            <h4>Thomas O'Brien Award</h4>
+                            <p>Graduate Committee at UW-Madison, $1000</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-item">
+                        <div class="cv-year">2025</div>
+                        <div class="cv-details">
+                            <h4>UW-Madison Student Research Grant</h4>
+                            <p>$600</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cv-item">
+                        <div class="cv-year">2023</div>
+                        <div class="cv-details">
+                            <h4>IEEE GRSS IADF School on Computer Vision for Earth Observation Travel Award</h4>
+                            <p>500€</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cv-section">
+                    <h3>Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>Research Methods</h4>
+                            <ul>
+                                <li>Remote Sensing Data Analysis</li>
+                                <li>Ecological Modeling</li>
+                                <li>Species Distribution Modeling</li>
+                                <li>Geospatial Analysis</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4>Technical Skills</h4>
+                            <ul>
+                                <li>Python (TensorFlow, PyTorch)</li>
+                                <li>R for Statistical Analysis</li>
+                                <li>Machine Learning & Deep Learning</li>
+                                <li>GIS Software (ArcGIS, QGIS)</li>
+                                <li>High Performance Computing</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h4>Specialized Knowledge</h4>
+                            <ul>
+                                <li>Satellite Image Processing</li>
+                                <li>Hyperspectral Data Analysis</li>
+                                <li>Convolutional Neural Networks</li>
+                                <li>Ecological Data Visualization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching Section -->
+    <section id="teaching" class="section">
+        <div class="container">
+            <h2 class="section-title">Teaching</h2>
+            <div class="section-content">
+                <div class="teaching-philosophy">
+                    <h3>Teaching Philosophy</h3>
+                    <p>I believe in creating an inclusive and engaging learning environment that encourages critical thinking and practical application of concepts. My teaching approach combines theoretical foundations with hands-on exercises, allowing students to develop both conceptual understanding and technical skills. I emphasize the importance of interdisciplinary perspectives in addressing complex environmental challenges and strive to inspire students to become thoughtful practitioners and researchers in their fields.</p>
+                </div>
+                
+                <div class="courses-taught">
+                    <h3>Workshops and Training</h3>
+                    <div class="course-item">
+                        <h4>Introduction to Convolutional Neural Networks (CNNs) for Satellite data and Ecology</h4>
+                        <p class="course-details">Geo-Webinar organized by SILVIS Lab at UW-Madison and Mongolian Geospatial Association, March 2025</p>
+                        <p>Delivered a comprehensive introduction to CNN applications in satellite data analysis for ecological research, covering fundamental concepts, implementation techniques, and case studies.</p>
+                    </div>
+                    
+                    <div class="course-item">
+                        <h4>Species Distribution Modelling using R</h4>
+                        <p class="course-details">Online Workshop, Institute of Environment and Sustainable Development, Banaras Hindu University, March 2021</p>
+                        <p>Conducted hands-on training on species distribution modeling techniques using R, covering data preparation, model selection, implementation, and interpretation of results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="section-content">
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Dynamic Habitat Indices">
+                        </div>
+                        <div class="project-details">
+                            <h3>Dynamic Habitat Indices from Satellite Imagery</h3>
+                            <p>Development and analysis of Dynamic Habitat Indices (DHIs) derived from Landsat and Sentinel-2 satellite imagery. This project involves processing time-series satellite data to create metrics that characterize habitat conditions for wildlife species, with applications in biodiversity monitoring and conservation planning.</p>
+                            <div class="project-meta">
+                                <p><strong>Duration:</strong> 2022 - Present</p>
+                                <p><strong>Collaborators:</strong> SILVIS Lab, NASA Biodiversity Team</p>
+                                <p><strong>Funding:</strong> NASA FINESST Fellowship</p>
+                            </div>
+                            <a href="#" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Explainable AI">
+                        </div>
+                        <div class="project-details">
+                            <h3>Explainable AI for Hierarchical Habitat Selection</h3>
+                            <p>Implementation of explainable AI techniques to understand and map hierarchical habitat selection patterns in bird species. This project aims to develop interpretable deep learning models that can reveal the complex relationships between environmental variables and species habitat preferences across different spatial scales.</p>
+                            <div class="project-meta">
+                                <p><strong>Duration:</strong> 2023 - Present</p>
+                                <p><strong>Collaborators:</strong> UW-Madison, SILVIS Lab</p>
+                                <p><strong>Funding:</strong> UW-Madison Research Grant</p>
+                            </div>
+                            <a href="#" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://via.placeholder.com/600x400" alt="Himalayan Ecosystems">
+                        </div>
+                        <div class="project-details">
+                            <h3>Hyperspectral Imaging of Himalayan Ecosystems</h3>
+                            <p>Analysis of Himalayan ecosystems and high-value plant species using hyperspectral remote sensing techniques. This project focused on developing methods to characterize ecosystem properties and assess the potential impacts of climate change on plant species distribution in the Himalayan region.</p>
+                            <div class="project-meta">
+                                <p><strong>Duration:</strong> 2019 - 2021</p>
+                                <p><strong>Collaborators:</strong> Banaras Hindu University</p>
+                                <p><strong>Funding:</strong> Institute of Environment and Sustainable Development</p>
+                            </div>
+                            <a href="#" class="btn btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="section-content">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>aanand37@wisc.edu</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>(608) 416-3483</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Department of Forestry and Wildlife Ecology<br>University of Wisconsin-Madison<br>Madison, WI 53706</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <p>Office Hours: By appointment</p>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="ResearchGate"><i class="fab fa-researchgate"></i></a>
+                            <a href="#" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3>Send a Message</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Akash Anand</h3>
+                    <p>PhD Student & NASA FINESST Fellow | UW-Madison</p>
+                </div>
+                
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#research">Research</a></li>
+                        <li><a href="#publications">Publications</a></li>
+                        <li><a href="#cv">CV</a></li>
+                        <li><a href="#teaching">Teaching</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="ResearchGate"><i class="fab fa-researchgate"></i></a>
+                    <a href="#" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Akash Anand. All rights reserved.</p>
+                <p>Proudly affiliated with <a href="https://www.wisc.edu/" target="_blank">University of Wisconsin-Madison</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
