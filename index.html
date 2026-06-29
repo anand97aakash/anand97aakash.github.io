@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Akash Anand, PhD Candidate</title>
+<meta name="description" content="Remote sensing scientist using satellites and AI to map biodiversity and guide conservation. PhD candidate & NASA FINESST Fellow, SILVIS Lab, University of Wisconsin-Madison." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#ffffff;
+    --soft:#f7f6f2;
+    --soft-2:#efeee8;
+    --text:#1d1d1a;
+    --muted:#6c6c64;
+    --line:#e6e4dc;
+    --accent:#2f6b4f;
+    --accent-soft:#e7f0ea;
+    --maxw:1080px;
+    --sidebar:300px;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--soft);color:var(--text);
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    line-height:1.7;-webkit-font-smoothing:antialiased;font-size:16px;
+  }
+  h1,h2,h3,h4{font-family:'Newsreader',Georgia,serif;font-weight:500;line-height:1.15;margin:0;letter-spacing:-.01em;}
+  a{color:var(--accent);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  p{margin:0 0 1.05rem;}
+
+  .shell{max-width:var(--maxw);margin:0 auto;background:var(--bg);min-height:100vh;box-shadow:0 0 60px -30px rgba(0,0,0,.18);}
+
+  /* BANNER */
+  .banner{position:relative;height:230px;overflow:hidden;background:#21372c;}
+  .banner svg{position:absolute;inset:0;width:100%;height:100%;display:block;}
+  .banner .credit{position:absolute;right:12px;bottom:9px;font-size:.7rem;color:rgba(255,255,255,.7);z-index:3;letter-spacing:.02em;}
+
+  /* LAYOUT */
+  .layout{display:grid;grid-template-columns:var(--sidebar) 1fr;gap:0;}
+  .sidebar{padding:0 30px 40px;border-right:1px solid var(--line);}
+  .main{padding:42px 46px 70px;min-width:0;}
+
+  /* PROFILE CARD */
+  .avatar{width:132px;height:132px;border-radius:50%;margin:-66px auto 0;display:block;
+    background:linear-gradient(150deg,#2f6b4f,#1d4636);border:5px solid var(--bg);
+    box-shadow:0 10px 30px -12px rgba(0,0,0,.4);position:relative;z-index:4;
+    display:flex;align-items:center;justify-content:center;color:#dbe9e1;
+    font-family:'Newsreader',serif;font-size:2.6rem;letter-spacing:.04em;}
+  .profile{text-align:center;padding-top:16px;}
+  .profile h1{font-size:1.55rem;margin-bottom:.15rem;}
+  .profile .role{font-size:.95rem;color:var(--text);font-weight:500;}
+  .hr{height:1px;background:var(--line);margin:18px 0;}
+  .affil{font-size:.9rem;color:var(--muted);text-align:center;line-height:1.5;}
+  .affil strong{color:var(--text);font-weight:600;}
+  .socials{display:flex;flex-direction:column;gap:2px;margin-top:6px;}
+  .socials a{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:9px;color:var(--text);font-size:.9rem;font-weight:500;transition:background .18s,color .18s;}
+  .socials a:hover{background:var(--soft);color:var(--accent);text-decoration:none;}
+  .socials svg{flex:none;color:var(--muted);}
+  .socials a:hover svg{color:var(--accent);}
+
+  /* NAV */
+  .topnav{display:flex;flex-wrap:wrap;gap:4px;border-bottom:1px solid var(--line);margin-bottom:34px;}
+  .topnav button{font-family:'Inter',sans-serif;font-size:.94rem;font-weight:500;color:var(--muted);
+    background:none;border:none;padding:10px 14px 14px;cursor:pointer;position:relative;transition:color .18s;}
+  .topnav button:hover{color:var(--text);}
+  .topnav button.active{color:var(--accent);}
+  .topnav button.active:after{content:"";position:absolute;left:14px;right:14px;bottom:-1px;height:2px;background:var(--accent);border-radius:2px;}
+
+  /* VIEWS */
+  .view{display:none;animation:fade .45s ease;}
+  .view.active{display:block;}
+  @keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+  .eyebrow{font-size:.74rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:.7rem;}
+  .view h2{font-size:2rem;margin-bottom:.5rem;}
+  .lead{font-family:'Newsreader',serif;font-size:1.32rem;line-height:1.5;color:var(--text);font-style:italic;margin:0 0 1.6rem;max-width:60ch;}
+  .prose{max-width:64ch;}
+  .prose strong{font-weight:600;color:var(--text);}
+
+  .callout{background:var(--accent-soft);border:1px solid #cfe2d7;border-radius:var(--radius);padding:18px 22px;margin-top:30px;display:flex;gap:14px;align-items:flex-start;max-width:64ch;}
+  .callout .ico{font-size:1.4rem;line-height:1;}
+  .callout p{margin:0;font-size:.95rem;color:#24503b;}
+
+  /* PUBLICATIONS */
+  .pub-group h3{font-size:1.15rem;color:var(--accent);margin:34px 0 6px;font-family:'Inter',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;}
+  .pub-item{padding:16px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:54px 1fr;gap:16px;}
+  .pub-item .yr{font-family:'Newsreader',serif;font-size:1.1rem;color:var(--muted);}
+  .pub-item .cite{font-size:.96rem;line-height:1.6;}
+  .pub-item .cite .title{font-weight:600;color:var(--text);}
+  .pub-item .cite .venue{font-style:italic;color:var(--accent);}
+  .me{background:linear-gradient(transparent 62%,var(--accent-soft) 0);}
+
+  /* PROJECTS */
+  .project{border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;margin-bottom:18px;transition:box-shadow .22s,transform .22s,border-color .22s;background:var(--bg);}
+  .project:hover{box-shadow:0 16px 40px -26px rgba(0,0,0,.35);transform:translateY(-3px);border-color:#d6d3c8;}
+  .project .tag{font-size:.74rem;font-weight:600;letter-spacing:.05em;color:var(--accent);background:var(--accent-soft);padding:.28rem .7rem;border-radius:999px;display:inline-block;margin-bottom:12px;}
+  .project h3{font-size:1.32rem;margin-bottom:10px;}
+  .pmeta{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:16px;border-top:1px solid var(--line);}
+  .pmeta div{padding:14px 16px 4px;border-right:1px solid var(--line);}
+  .pmeta div:last-child{border-right:none;}
+  .pmeta .k{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:5px;}
+  .pmeta .v{font-size:.9rem;color:var(--text);line-height:1.55;}
+
+  /* TEACHING / CV lists */
+  .timeline{max-width:66ch;}
+  .t-item{display:grid;grid-template-columns:130px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line);}
+  .t-item .when{font-size:.86rem;color:var(--muted);font-weight:500;}
+  .t-item h4{font-size:1.06rem;font-family:'Newsreader',serif;font-weight:600;margin-bottom:4px;}
+  .t-item p{font-size:.92rem;color:var(--muted);margin:0;}
+  .cv-btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;padding:.7rem 1.3rem;border-radius:999px;font-weight:600;font-size:.92rem;margin-top:8px;}
+  .cv-btn:hover{background:#234f3a;text-decoration:none;}
+
+  /* CONTACT */
+  .contact-card{max-width:60ch;}
+  .contact-row{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);font-size:.98rem;}
+  .contact-row svg{color:var(--accent);flex:none;}
+
+  footer{padding:26px 46px;border-top:1px solid var(--line);font-size:.84rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+
+  /* RESPONSIVE */
+  @media(max-width:820px){
+    .layout{grid-template-columns:1fr;}
+    .sidebar{border-right:none;border-bottom:1px solid var(--line);padding-bottom:26px;}
+    .main{padding:32px 26px 56px;}
+    .socials{flex-direction:row;flex-wrap:wrap;justify-content:center;}
+    .pmeta{grid-template-columns:1fr;}
+    .pmeta div{border-right:none;border-bottom:1px solid var(--line);}
+    .pmeta div:last-child{border-bottom:none;}
+    .t-item{grid-template-columns:1fr;gap:4px;}
+    footer{padding:22px 26px;}
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <!-- BANNER (replace SVG with your own field/landscape photo) -->
+  <div class="banner">
+    <svg viewBox="0 0 1080 230" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#cfe3d8"/><stop offset="1" stop-color="#e9f0ea"/>
+        </linearGradient>
+        <linearGradient id="h1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4f8a6b"/><stop offset="1" stop-color="#3c7155"/></linearGradient>
+        <linearGradient id="h2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#356049"/><stop offset="1" stop-color="#284b39"/></linearGradient>
+        <linearGradient id="h3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#21372c"/><stop offset="1" stop-color="#182a21"/></linearGradient>
+      </defs>
+      <rect width="1080" height="230" fill="url(#sky)"/>
+      <circle cx="880" cy="64" r="34" fill="#f4f1e6" opacity=".85"/>
+      <path d="M0 150 C160 110 300 120 470 150 C660 184 820 150 1080 122 L1080 230 L0 230 Z" fill="url(#h1)"/>
+      <path d="M0 178 C200 150 360 168 560 182 C760 196 900 178 1080 160 L1080 230 L0 230 Z" fill="url(#h2)"/>
+      <path d="M0 206 C220 188 420 200 640 206 C820 211 960 202 1080 196 L1080 230 L0 230 Z" fill="url(#h3)"/>
+      <g stroke="#ffffff" stroke-width="1" opacity=".10" fill="none">
+        <path d="M0 150 C160 110 300 120 470 150 C660 184 820 150 1080 122"/>
+        <path d="M0 160 C160 122 300 132 470 160 C660 192 820 160 1080 134"/>
+        <path d="M0 140 C160 100 300 110 470 140 C660 174 820 140 1080 112"/>
+      </g>
+    </svg>
+    <span class="credit">Banner placeholder — swap for your own fieldwork or satellite imagery</span>
+  </div>
+
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="avatar" title="Replace with a headshot">AA</div>
+      <div class="profile">
+        <h1>Akash Anand</h1>
+        <div class="role">PhD Candidate &amp; NASA FINESST Fellow</div>
+      </div>
+      <div class="hr"></div>
+      <div class="affil">
+        Department of Forestry &amp;<br/>Wildlife Ecology<br/>
+        <strong>University of Wisconsin–Madison</strong><br/>
+        <span style="color:var(--muted)">SILVIS Lab</span>
+      </div>
+      <div class="hr"></div>
+      <nav class="socials">
+        <a href="https://scholar.google.com/citations?hl=en&user=U-a5V24AAAAJ" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3L1 9l11 6 9-4.9V17h2V9L12 3zM5 13.2V17l7 3.8L19 17v-3.8l-7 3.8-7-3.8z"/></svg>Google Scholar</a>
+        <a href="https://www.researchgate.net/" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6 3h3.2c2 0 3.3 1.1 3.3 2.9 0 1.4-.8 2.4-2 2.8l2.4 4.3h-2.2l-2.1-4H8v4H6V3zm2 1.7v3h1.1c1 0 1.6-.6 1.6-1.5S10.1 4.7 9.1 4.7H8zM16.5 9c1.9 0 3.3 1.5 3.3 3.6S18.4 16 16.5 16s-3.3-1.4-3.3-3.5S14.6 9 16.5 9zm0 1.7c-.8 0-1.4.7-1.4 1.9s.6 1.9 1.4 1.9 1.4-.8 1.4-1.9-.6-1.9-1.4-1.9z"/></svg>ResearchGate</a>
+        <a href="https://orcid.org/0000-0003-1086-5676" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zM8.5 7.2a1 1 0 110 2 1 1 0 010-2zM7.6 10.4h1.8v6.4H7.6v-6.4zm3.1 0h3.1c2.2 0 3.6 1.4 3.6 3.2 0 1.9-1.4 3.2-3.7 3.2h-3v-6.4zm1.8 1.5v3.4h1.1c1.2 0 2-.6 2-1.7 0-1-.7-1.7-2-1.7h-1.1z"/></svg>ORCID</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 102.5 6 2.5 2.5 0 004.98 3.5zM3 8.98h4V21H3zM9 8.98h3.8v1.64h.05a4.2 4.2 0 013.77-2.07c4 0 4.75 2.65 4.75 6.1V21h-4v-5.4c0-1.29 0-2.95-1.8-2.95s-2.07 1.4-2.07 2.85V21H9z"/></svg>LinkedIn</a>
+        <a href="mailto:aanand37@wisc.edu">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Email</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <div class="topnav" id="topnav">
+        <button class="active" data-view="home">Home</button>
+        <button data-view="publications">Publications</button>
+        <button data-view="projects">Projects</button>
+        <button data-view="teaching">Teaching</button>
+        <button data-view="cv">CV</button>
+        <button data-view="contact">Contact</button>
+      </div>
+
+      <!-- HOME -->
+      <section class="view active" id="home">
+        <div class="eyebrow">About me</div>
+        <p class="lead">Remote sensing scientist using satellites and artificial intelligence to map biodiversity and guide conservation.</p>
+        <div class="prose">
+          <p>I am a <strong>PhD candidate</strong> and <strong>NASA FINESST Fellow</strong> in the Department of Forestry and Wildlife Ecology at the University of Wisconsin–Madison, where I work in the <strong>SILVIS Lab</strong> with Volker C. Radeloff. My research bridges <strong>satellite Earth observation</strong> and ecological modeling to understand where species occur, and why.</p>
+          <p>A central thread of my work is <strong>deep learning for species distribution modeling</strong>: my first-author study in <em>PNAS</em> shows that <strong>convolutional neural networks</strong> outperform other presence-only algorithms. I also develop <strong>explainable AI</strong> to reveal the multi-scale drivers of bird habitat selection, and I co-develop the <strong>Dynamic Habitat Indices</strong> — satellite measures of vegetation productivity, derived from MODIS, VIIRS, Landsat, and Sentinel data, that are now widely used in biodiversity science.</p>
+          <p>Before Madison, I trained in <strong>geoinformatics</strong> in India and worked on <strong>hyperspectral imaging</strong> of Himalayan ecosystems, mapping species diversity and estimating forest and mangrove <strong>"blue" carbon</strong>. Across all of it, I care about methods that are both rigorous and usable — accurate enough to trust, and transparent enough to act on.</p>
+          <p>More detail lives in the <a href="#" data-jump="publications">publications</a> and <a href="#" data-jump="projects">projects</a> sections. For collaborations or questions, feel free to <a href="#" data-jump="contact">get in touch</a>.</p>
+        </div>
+        <div class="callout">
+          <span class="ico">🛰️</span>
+          <p>Currently focused on scaling deep-learning species distribution models and satellite biodiversity indicators for NASA's Biodiversity and Ecological Conservation science teams.</p>
+        </div>
+      </section>
+
+      <!-- PUBLICATIONS -->
+      <section class="view" id="publications">
+        <div class="eyebrow">Publications</div>
+        <h2>Selected & recent work</h2>
+        <p style="color:var(--muted);max-width:60ch;">A selection from 20+ peer-reviewed articles and book chapters spanning ecology, remote sensing, and machine learning. Author <span class="me">Anand, A.</span> highlighted. Full list on <a href="https://scholar.google.com/citations?hl=en&user=U-a5V24AAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</p>
+
+        <div class="pub-group">
+          <h3>Journal articles</h3>
+          <div class="pub-item"><div class="yr">2026</div><div class="cite"><span class="me">Anand, A.</span>, Deneu, B., &amp; Radeloff, V. C. <span class="title">Convolutional neural networks outperform other presence-only species distribution modeling algorithms.</span> <span class="venue">PNAS.</span></div></div>
+          <div class="pub-item"><div class="yr">2025</div><div class="cite">Liu, D., Silveira, E. M., Razenkova, E., <span class="me">Anand, A.</span>, … Radeloff, V. C. <span class="title">Global Dynamic Habitat Indices based on MODIS and VIIRS vegetation products.</span> <span class="venue">Remote Sensing of Environment.</span></div></div>
+          <div class="pub-item"><div class="yr">2025</div><div class="cite">Silveira, E. M. O., <span class="me">Anand, A.</span>, Pidgeon, A. M., … Radeloff, V. C. <span class="title">Scalogram habitat measures to predict bird abundance.</span> <span class="venue">Ecography.</span></div></div>
+          <div class="pub-item"><div class="yr">2025</div><div class="cite">Razenkova, E., Lewinska, K. E., <span class="me">Anand, A.</span>, … Radeloff, V. C. <span class="title">Medium-resolution Dynamic Habitat Indices from Landsat and Sentinel-2 satellite imagery.</span> <span class="venue">Ecological Indicators.</span></div></div>
+          <div class="pub-item"><div class="yr">2025</div><div class="cite">Schug, F., Kasraee, N. K., <span class="me">Anand, A.</span>, … Radeloff, V. C. <span class="title">Quantifying urban growth with 1970s Hexagon spy satellite imagery and Mask R-CNN building footprint detection.</span> <span class="venue">Landscape and Urban Planning.</span></div></div>
+          <div class="pub-item"><div class="yr">2025</div><div class="cite">Olah, A., Radeloff, V. C., <span class="me">Anand, A.</span>, … Pidgeon, A. M. <span class="title">Landscape-scale effects of primary productivity on forest bird occurrence and abundance in Argentina.</span> <span class="venue">Landscape Ecology.</span></div></div>
+          <div class="pub-item"><div class="yr">2024</div><div class="cite">Sagar, HSSC, <span class="me">Anand, A.</span>, Persche, M., Pidgeon, A. M., Zuckerberg, B., Şekercioğlu, Ç. H., &amp; Burivalova, Z. <span class="title">Global analysis of acoustic frequency characteristics in birds.</span> <span class="venue">Proceedings of the Royal Society B.</span></div></div>
+          <div class="pub-item"><div class="yr">2022</div><div class="cite"><span class="me">Anand, A.</span>, Srivastava, P. K., Pandey, P. C., Khan, M. L., &amp; Behera, M. D. <span class="title">Assessing the niche of Rhododendron arboreum using entropy and machine learning algorithms.</span> <span class="venue">Journal of Applied Remote Sensing.</span></div></div>
+          <div class="pub-item"><div class="yr">2022</div><div class="cite"><span class="me">Anand, A.</span>, Malhi, R. K. M., Srivastava, P. K., … Sandhya Kiran, G. <span class="title">Optimal band characterization in reformation of hyperspectral indices for species diversity estimation.</span> <span class="venue">Physics and Chemistry of the Earth.</span></div></div>
+          <div class="pub-item"><div class="yr">2021</div><div class="cite"><span class="me">Anand, A.</span>, Dinesh, A. S., Srivastava, P. K., … Kumar, P. <span class="title">Rainfall rate estimation over India using GPM Microwave Imager and machine learning algorithms.</span> <span class="venue">Geocarto International.</span></div></div>
+          <div class="pub-item"><div class="yr">2020</div><div class="cite"><span class="me">Anand, A.</span>, Pandey, P. C., Petropoulos, G. P., … Malhi, R. K. M. <span class="title">Use of Hyperion for mangrove forest carbon stock assessment in Bhitarkanika — a contribution to the Blue Carbon Initiative.</span> <span class="venue">Remote Sensing.</span></div></div>
+        </div>
+
+        <div class="pub-group">
+          <h3>Book chapters</h3>
+          <div class="pub-item"><div class="yr">2022</div><div class="cite"><span class="me">Anand, A.</span> <span class="title">Sentinel SAR and in-situ–based high-resolution above-ground carbon stock estimation in the open forests of Ramgarh District.</span> <span class="venue">Research Anthology on Ecosystem Conservation and Preserving Biodiversity, IGI Global.</span></div></div>
+          <div class="pub-item"><div class="yr">2021</div><div class="cite"><span class="me">Anand, A.</span>, Singh, P., Srivastava, P. K., &amp; Gupta, M. <span class="title">GIS-based analysis for soil moisture estimation via kriging with external drift.</span> <span class="venue">Agricultural Water Management, Academic Press.</span></div></div>
+          <div class="pub-item"><div class="yr">2020</div><div class="cite">Srivastava, P. K., Malhi, R. K. M., Pandey, P. C., <span class="me">Anand, A.</span>, … <span class="title">Revisiting hyperspectral remote sensing: origin, processing, applications and way forward.</span> <span class="venue">Hyperspectral Remote Sensing, Elsevier.</span></div></div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="view" id="projects">
+        <div class="eyebrow">Projects</div>
+        <h2>Research projects</h2>
+        <p style="color:var(--muted);max-width:60ch;margin-bottom:26px;">Each project moves from an ecological problem, through a rigorous method, to a result that changes how we monitor and protect biodiversity.</p>
+
+        <article class="project">
+          <span class="tag">Deep learning · PNAS</span>
+          <h3>Teaching machines to map species better</h3>
+          <p style="color:var(--muted);max-width:62ch;margin:0;">Benchmarking convolutional neural networks against the leading presence-only species distribution models.</p>
+          <div class="pmeta">
+            <div><div class="k">Problem</div><div class="v">Most biodiversity data is patchy, presence-only records; classic models miss the complex spatial patterns they hide.</div></div>
+            <div><div class="k">Method</div><div class="v">Built and benchmarked CNNs against standard algorithms across many species using stacked environmental and remote-sensing layers.</div></div>
+            <div><div class="k">Result</div><div class="v">CNNs outperformed every other presence-only method — first-author paper in <em>PNAS</em>, enabling more accurate maps at scale.</div></div>
+          </div>
+        </article>
+
+        <article class="project">
+          <span class="tag">Explainable AI · Ornithology</span>
+          <h3>Opening the black box of bird habitat</h3>
+          <p style="color:var(--muted);max-width:62ch;margin:0;">Explainable AI for multi-scale habitat selection in birds.</p>
+          <div class="pmeta">
+            <div><div class="k">Problem</div><div class="v">Birds select habitat across many scales; ML models predict well but rarely explain why, limiting their use.</div></div>
+            <div><div class="k">Method</div><div class="v">Applied explainable AI to attribute predictions to specific environmental drivers and the scales at which each matters.</div></div>
+            <div><div class="k">Result</div><div class="v">A transparent, hierarchical picture of habitat selection that managers can translate into targeted action.</div></div>
+          </div>
+        </article>
+
+        <article class="project">
+          <span class="tag">Satellite indicators · NASA</span>
+          <h3>Satellite vital signs for biodiversity</h3>
+          <p style="color:var(--muted);max-width:62ch;margin:0;">The Dynamic Habitat Indices, from MODIS to Sentinel-2.</p>
+          <div class="pmeta">
+            <div><div class="k">Problem</div><div class="v">Global biodiversity monitoring needs consistent, scalable habitat indicators that link to where animals are.</div></div>
+            <div><div class="k">Method</div><div class="v">Co-developed the DHIs — cumulative productivity, minimum cover, seasonality — across MODIS, VIIRS, Landsat &amp; Sentinel-2.</div></div>
+            <div><div class="k">Result</div><div class="v">Indices that predict bird abundance and richness, now used widely in biodiversity science and by NASA teams.</div></div>
+          </div>
+        </article>
+
+        <article class="project">
+          <span class="tag">Hyperspectral · Carbon</span>
+          <h3>Mapping fragile ecosystems &amp; blue carbon</h3>
+          <p style="color:var(--muted);max-width:62ch;margin:0;">Foundational hyperspectral work in the Himalayas and Indian mangroves.</p>
+          <div class="pmeta">
+            <div><div class="k">Problem</div><div class="v">High-value, climate-sensitive ecosystems lack fine-grained maps of species diversity and carbon.</div></div>
+            <div><div class="k">Method</div><div class="v">Used hyperspectral &amp; SAR imagery with machine learning to map diversity, biomass, and mangrove blue carbon.</div></div>
+            <div><div class="k">Result</div><div class="v">Multiple first-author papers establishing the remote-sensing foundation behind my current AI work.</div></div>
+          </div>
+        </article>
+      </section>
+
+      <!-- TEACHING -->
+      <section class="view" id="teaching">
+        <div class="eyebrow">Teaching &amp; training</div>
+        <h2>Invited lectures &amp; workshops</h2>
+        <p style="color:var(--muted);max-width:60ch;margin-bottom:10px;">I enjoy teaching applied machine learning and remote sensing to ecologists and geospatial scientists.</p>
+        <div class="timeline">
+          <div class="t-item"><div class="when">Mar 2025</div><div><h4>Introduction to CNNs for Satellite Data &amp; Ecology</h4><p>Geo-Webinar — SILVIS Lab, UW–Madison &amp; the Mongolian Geospatial Association.</p></div></div>
+          <div class="t-item"><div class="when">Mar 2021</div><div><h4>Species Distribution Modelling using R</h4><p>Hands-on training, Online Workshop — Institute of Environment and Sustainable Development, Banaras Hindu University.</p></div></div>
+          <div class="t-item"><div class="when">2018–2021</div><div><h4>Workshops &amp; training in remote sensing</h4><p>Hyperspectral data analysis (IIT-BHU), high-performance computing, and satellite calibration/validation at ISRO's Space Applications Centre.</p></div></div>
+        </div>
+      </section>
+
+      <!-- CV -->
+      <section class="view" id="cv">
+        <div class="eyebrow">Curriculum vitae</div>
+        <h2>Education &amp; experience</h2>
+        <a class="cv-btn" href="#" id="cvDownload">⬇ Download full CV (PDF)</a>
+        <div class="timeline" style="margin-top:26px;">
+          <div class="t-item"><div class="when">2021 – present</div><div><h4>PhD in Forestry — University of Wisconsin–Madison</h4><p>Dept. of Forestry &amp; Wildlife Ecology · SILVIS Lab · Advisor: Volker C. Radeloff · NASA FINESST Fellow.</p></div></div>
+          <div class="t-item"><div class="when">2019 – 2021</div><div><h4>Junior Research Fellow — Banaras Hindu University</h4><p>Institute of Environment and Sustainable Development. Hyperspectral imaging of Himalayan ecosystems and high-value plant species under climate uncertainty.</p></div></div>
+          <div class="t-item"><div class="when">2014 – 2019</div><div><h4>Integrated B.Sc.–M.Sc. in Geoinformatics</h4><p>Central University of Jharkhand, India.</p></div></div>
+        </div>
+        <h2 style="margin-top:34px;">Awards</h2>
+        <div class="timeline">
+          <div class="t-item"><div class="when">2023</div><div><h4>NASA FINESST Graduate Research Fellowship</h4><p>Future Investigators in NASA Earth and Space Science and Technology.</p></div></div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="view" id="contact">
+        <div class="eyebrow">Contact</div>
+        <h2>Get in touch</h2>
+        <p style="color:var(--muted);max-width:56ch;">If your work touches biodiversity, remote sensing, or applied AI, I'd love to hear from you — for collaborations, data, or just to share thoughts.</p>
+        <div class="contact-card">
+          <div class="contact-row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:aanand37@wisc.edu">aanand37@wisc.edu</a></div>
+          <div class="contact-row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.2-7-11a7 7 0 0114 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>SILVIS Lab, University of Wisconsin–Madison</div>
+          <div class="contact-row"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3L1 9l11 6 9-4.9V17h2V9L12 3z"/></svg><a href="https://scholar.google.com/citations?hl=en&user=U-a5V24AAAAJ" target="_blank" rel="noopener">Google Scholar</a> &nbsp;·&nbsp; <a href="https://orcid.org/0000-0003-1086-5676" target="_blank" rel="noopener">ORCID</a></div>
+        </div>
+      </section>
+
+      <footer>
+        <span>© 2026 Akash Anand · SILVIS Lab, UW–Madison</span>
+        <span>Design inspired by award-winning academic websites.</span>
+      </footer>
+    </main>
+  </div>
+</div>
+
+<script>
+  const nav = document.getElementById('topnav');
+  const buttons = [...nav.querySelectorAll('button')];
+  const views = [...document.querySelectorAll('.view')];
+  function show(name){
+    buttons.forEach(b => b.classList.toggle('active', b.dataset.view === name));
+    views.forEach(v => v.classList.toggle('active', v.id === name));
+    document.querySelector('.main').scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  nav.addEventListener('click', e => { if(e.target.dataset.view) show(e.target.dataset.view); });
+  document.querySelectorAll('[data-jump]').forEach(a =>
+    a.addEventListener('click', e => { e.preventDefault(); show(a.dataset.jump); }));
+  document.getElementById('cvDownload').addEventListener('click', e => {
+    e.preventDefault();
+    alert('Link this button to your CV PDF (e.g., /Akash_Anand_CV.pdf) when you publish the site.');
+  });
+</script>
+</body>
+</html>
